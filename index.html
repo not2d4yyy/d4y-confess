@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffdbe7" />
+  <title>A Little Letter For You 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-blobs" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+  <div id="heartField" class="heart-field" aria-hidden="true"></div>
+
+  <main class="app-shell">
+    <!-- PAGE 1: OPENING -->
+    <section class="page active" id="openingPage">
+      <div class="hero-card glass-card">
+        <div class="eyebrow">psst... ada sesuatu buat kamu</div>
+        <h1>Hai, Ayuu! <span class="wiggle">💗</span></h1>
+        <p class="subtitle">Aku ada surat kecil yang harus kamu baca.</p>
+
+        <button class="envelope-button" id="openLetterBtn" aria-label="Buka surat">
+          <span class="envelope">
+            <span class="envelope-back"></span>
+            <span class="letter-preview">for you ♡</span>
+            <span class="envelope-front"></span>
+            <span class="envelope-flap"></span>
+            <span class="seal">♥</span>
+          </span>
+        </button>
+
+        <p class="tap-hint">tap the letter ✨</p>
+      </div>
+    </section>
+
+    <!-- PAGE 2: LETTER -->
+    <section class="page" id="letterPage">
+      <article class="letter-card">
+        <div class="paper-tape tape-left"></div>
+        <div class="paper-tape tape-right"></div>
+        <p class="letter-date" id="letterDate"></p>
+        <h2>Dear, Ayuu 💕</h2>
+        <div class="letter-body">
+          <p>Aku gatau harus mulai dari mana, tapi dari dulu ada sesuatu yang udah lama pen aku bilang.</p>
+          <p>Makasih karena udah hadir, udah bikin hari-hari biasa jadi terasa lebih menyenangkan, dan untuk semua obrolan kecil yang ternyata berarti banyak.</p>
+          <p>Aku mungkin ga jago buat rangkai kata, tapi satu hal yang aku tahu...</p>
+          <p class="highlight-text">aku bahagia saat bersamamu. ♡</p>
+          <p>Jadi, aku punya satu pertanyaan kecil buat kamu.</p>
+        </div>
+        <button class="primary-btn" id="continueBtn">Lanjut dulu ya 💌</button>
+      </article>
+    </section>
+
+    <!-- PAGE 3: QUESTION -->
+    <section class="page" id="questionPage">
+      <div class="question-card glass-card">
+        <div class="mini-heart">💗</div>
+        <p class="small-copy">okay, here goes...</p>
+        <h2>Will you be my<br><span>girlfriend?</span></h2>
+        <p class="question-copy">Ga perlu buru-buru... tapi aku berharap jawabannya yang sebelah kiri hehe...</p>
+
+        <div class="answer-zone" id="answerZone">
+          <button class="yes-btn" id="yesBtn">Iya, mau! 💕</button>
+          <button class="no-btn" id="noBtn">Enggak 🙈</button>
+        </div>
+        <p class="no-counter" id="noCounter"></p>
+      </div>
+    </section>
+
+    <!-- PAGE 4: SUCCESS -->
+    <section class="page" id="successPage">
+      <div class="success-card glass-card">
+        <div class="success-icon">💞</div>
+        <p class="small-copy">you said yes!</p>
+        <h2>Yeayyy!!</h2>
+        <p class="success-message">Mulai sekarang, semoga kita bisa bikin lebih banyak cerita manis bareng. 💗</p>
+
+        <div class="media-placeholder">
+          <img id="celebrationMedia" src="assets/cute.gif" alt="Our cute moment" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <div class="placeholder-content">
+            <span>🖼️</span>
+            <strong>GIF / Foto kalian</strong>
+            <small>assets/cute.gif</small>
+          </div>
+        </div>
+
+        <div class="love-note">you + me <span>∞</span></div>
+        <button type="button" class="wa-button" id="waButton">
+          💌 Kirim jawabanmu
+        </button>
+        <button class="secondary-btn" id="replayBtn">Ulang dari awal ↻</button>
+      </div>
+    </section>
+  </main>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Toggle music" title="Music">
+    <span id="musicIcon">♫</span>
+  </button>
+  <audio id="bgMusic" src="assets/music.mp3" loop preload="none"></audio>
+
+  <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
