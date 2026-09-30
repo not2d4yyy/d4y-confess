@@ -161,12 +161,30 @@ musicToggle.addEventListener('click', async () => {
 document.getElementById("waButton").onclick = function () {
   const phone = "6287723052620";
 
+  // Ambil tanggal & waktu saat tombol ditekan
+  const now = new Date();
+
+  const tanggal = now.toLocaleDateString("id-ID", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric"
+  });
+
+  const waktu = now.toLocaleTimeString("id-ID", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  }).replace(".", ":");
+
   const message = `Haiii 💗
 
 Aku udah baca semuanya...
 
 Dan jawabanku:
 IYA, AKU MAU! 🥺💕
+
+📅 Tanggal: ${tanggal}
+🕐 Waktu: ${waktu} WIB
 
 Suratnya sudah diterima dengan baik yaa 😝💌`;
 
