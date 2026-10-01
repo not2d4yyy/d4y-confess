@@ -180,8 +180,7 @@ document.getElementById("waButton").onclick = function () {
 
 Aku udah baca semuanya...
 
-Dan jawabanku:
-IYA, AKU MAU! 🥺💕
+Dan jawabanku: IYA, AKU MAU! 🥺💕
 
 📅 Tanggal: ${tanggal}
 🕐 Waktu: ${waktu} WIB
